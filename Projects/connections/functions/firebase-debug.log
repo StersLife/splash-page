@@ -1,0 +1,68 @@
+[debug] [2023-10-04T09:32:14.531Z] ----------------------------------------------------------------------
+[debug] [2023-10-04T09:32:14.533Z] Command:       /Users/himel/.nvm/versions/node/v16.17.0/bin/node /Users/himel/.nvm/versions/node/v16.17.0/bin/firebase functions:shell
+[debug] [2023-10-04T09:32:14.533Z] CLI Version:   12.6.1
+[debug] [2023-10-04T09:32:14.534Z] Platform:      darwin
+[debug] [2023-10-04T09:32:14.535Z] Node Version:  v16.17.0
+[debug] [2023-10-04T09:32:14.540Z] Time:          Wed Oct 04 2023 15:32:14 GMT+0600 (Bangladesh Standard Time)
+[debug] [2023-10-04T09:32:14.540Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-10-04T09:32:14.639Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-10-04T09:32:14.640Z] > authorizing via signed-in user (asaduzzamanhimel12@gmail.com)
+[debug] [2023-10-04T09:32:14.640Z] [iam] checking project asdd-db7d2 for permissions ["firebase.projects.get"]
+[debug] [2023-10-04T09:32:14.642Z] > refreshing access token with scopes: []
+[debug] [2023-10-04T09:32:14.643Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-10-04T09:32:14.644Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-10-04T09:32:15.017Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-10-04T09:32:15.022Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-10-04T09:32:15.042Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/asdd-db7d2:testIamPermissions [none]
+[debug] [2023-10-04T09:32:15.043Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/asdd-db7d2:testIamPermissions x-goog-quota-user=projects/asdd-db7d2
+[debug] [2023-10-04T09:32:15.044Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/asdd-db7d2:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-10-04T09:32:16.791Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/asdd-db7d2:testIamPermissions 200
+[debug] [2023-10-04T09:32:16.792Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/asdd-db7d2:testIamPermissions {"permissions":["firebase.projects.get"]}
+[warn] ⚠  functions: Functions Emulator unable to start on port 5000, starting on 5001 instead. {"metadata":{"emulator":{"name":"functions"},"message":"Functions Emulator unable to start on port 5000, starting on 5001 instead."}}
+[debug] [2023-10-04T09:32:16.984Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-10-04T09:32:16.986Z] defaultcredentials: writing to file /Users/himel/.config/firebase/asaduzzamanhimel12_gmail_com_application_default_credentials.json
+[debug] [2023-10-04T09:32:16.988Z] DEBUG: Setting GAC to /Users/himel/.config/firebase/asaduzzamanhimel12_gmail_com_application_default_credentials.json
+[debug] [2023-10-04T09:32:16.990Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/asdd-db7d2/adminSdkConfig [none]
+[debug] [2023-10-04T09:32:17.632Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/asdd-db7d2/adminSdkConfig 200
+[debug] [2023-10-04T09:32:17.634Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/asdd-db7d2/adminSdkConfig {"projectId":"asdd-db7d2","storageBucket":"asdd-db7d2.appspot.com"}
+[debug] [2023-10-04T09:32:17.662Z] [functions] Watching "/Users/himel/Projects/importing/functions" for Cloud Functions...
+[debug] [2023-10-04T09:32:17.676Z] Validating nodejs source
+[debug] [2023-10-04T09:32:18.611Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.5.1",
+    "firebase-admin": "^11.5.0",
+    "firebase-functions": "^4.2.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.0.0"
+  },
+  "private": true
+}
+[debug] [2023-10-04T09:32:18.612Z] Building nodejs source
+[debug] [2023-10-04T09:32:18.612Z] Failed to find version of module node: reached end of search path /Users/himel/Projects/importing/functions/node_modules
+[info] ✔  functions: Using node@16 from host. 
+[debug] [2023-10-04T09:32:18.617Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-10-04T09:32:18.640Z] Found firebase-functions binary at '/Users/himel/Projects/importing/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8443
+
+[debug] [2023-10-04T09:32:19.263Z] Got response from /__/functions.yaml {"endpoints":{"myFunction":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"eventTrigger":{"eventType":"providers/cloud.firestore/eventTypes/document.create","eventFilters":{"resource":"projects/asdd-db7d2/databases/(default)/documents/properties/{docId}"},"retry":false},"labels":{},"entryPoint":"myFunction"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[debug] [2023-10-04T09:32:19.283Z] [functions] Loaded functions definitions from source: myFunction.
+[debug] [2023-10-04T09:32:19.283Z] [functions[us-central1-myFunction]] function ignored because the firestore emulator does not exist or is not running.
+[info] i  functions: Loaded functions: myFunction 
+[warn] ⚠  functions: The following emulators are not running, calls to these services will affect production: firestore, database, pubsub, storage, eventarc 

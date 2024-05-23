@@ -1,0 +1,256 @@
+
+.dialer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dialer-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 24px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.dialer-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dialer-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.dialer-button {
+    width: 60px;
+    height: 60px;
+    font-size: 18px;
+    border: none;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dialer-button:hover {
+    background-color: #e0e0e0;
+}
+
+.dialer-text {
+    font-size: 12px;
+    color: #888;
+}
+
+.dialer-call-button {
+    width: 60px;
+    height: 60px;
+    margin-top: 20px;
+    background-color: #4caf50;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dialer-call-button:hover {
+    background-color: #45a049;
+}
+
+.dialer-call-button img {
+    width: 24px;
+    height: 24px;
+}
+  /* ActiveScreen.css */
+  .ongoing-call {
+    width: 320px;
+    background-color: #1E1E1E;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333333;
+    padding: 10px;
+    border-bottom: 1px solid #444444;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+}
+
+.user::before {
+    content: "😀";
+    margin-right: 5px;
+}
+
+.call-timer {
+    font-size: 0.9em;
+    color: #888888;
+}
+
+.add-call {
+    font-size: 1.2em;
+    color: #888888;
+    cursor: pointer;
+}
+
+.participants {
+    padding: 10px;
+}
+
+.participant {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.user-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.profile-pic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #8A56AC;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.initial {
+    font-size: 1.5em;
+    color: white;
+}
+
+.participant-name {
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+}
+
+.you {
+    color: #888888;
+    font-size: 0.9em;
+    margin-left: 5px;
+}
+
+.loading {
+    font-size: 0.9em;
+    margin-left: 5px;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    border-top: 1px solid #444444;
+}
+
+ 
+
+button .icon {
+    font-size: 1.2em;
+}
+
+.end-call {
+    background-color: #E62E3E;
+}
+
+
+.dialer {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+}
+
+.display {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fafafa;
+}
+
+.display input {
+  border: none;
+  background: none;
+  font-size: 1.2em;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.backspace {
+  background: none;
+  border: none;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.digit-button {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 1.2em;
+  cursor: pointer;
+  position: relative;
+}
+
+.digit-button .sub-text {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  font-size: 0.6em;
+  color: #aaa;
+}
+
+.call-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 20px;
+  font-size: 1.5em;
+  cursor: pointer;
+}

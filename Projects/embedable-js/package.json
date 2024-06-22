@@ -1,0 +1,24 @@
+{
+  "name": "embedable-js",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.3.1"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.24.7",
+    "@vitejs/plugin-react": "^4.3.1",
+    "lightpick": "^1.6.2",
+    "moment": "^2.30.1",
+    "react": "^18.3.1",
+    "react-datepicker": "^7.1.0",
+    "react-dom": "^18.3.1",
+    "vite-plugin-css-injected-by-js": "^3.5.1"
+  }
+}

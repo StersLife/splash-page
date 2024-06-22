@@ -1,0 +1,48 @@
+.houfy_widget {
+  font-family: Arial, sans-serif;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.pricing-widget,
+.contact-widget {
+  background-color: var(--bg-color, #FFFFFF);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.book-button,
+.contact-widget button {
+  background-color: var(--button-color, #e8485d);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.price {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.description {
+  font-size: 14px;
+  color: #666;
+}
+
+.contact-widget form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-widget input,
+.contact-widget textarea {
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}

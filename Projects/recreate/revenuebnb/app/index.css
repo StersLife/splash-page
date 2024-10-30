@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'GTBold';
+    src: url('/fonts/GTWalsheim/GT-Walsheim-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'GTBoldOblique';
+    src: url('/fonts/GTWalsheim/GT-Walsheim-Bold-Oblique.ttf') format('truetype');
+    font-weight: bold;
+    font-style: oblique;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'GTMedium';
+    src: url('/fonts/GTWalsheim/GT-Walsheim-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'GTLight';
+    src: url('/fonts/GTWalsheim/GT-Walsheim-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'GTRegular';
+    src: url('/fonts/GTWalsheim/GT-Walsheim-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'GTMediumOblique';
+    src: url('/fonts/GTWalsheim/GT-Walsheim-Medium-Oblique.woff2') format('woff2');
+    font-weight: 600;
+    font-style: oblique;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'GT Eesti Text Light';
+    src: url('/fonts/GT-Eesti-Text-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+  

@@ -22,3 +22,113 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+/* Marker styles */
+.custom-marker {
+  cursor: pointer;
+}
+
+/* Container for occupancy/revenue numbers */
+.lock-container {
+  background-color: white;
+  border-radius: 8px;
+  padding: 5px 17px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lock-container:hover {
+  background-color: rgba(92, 171, 140, 0.3);
+}
+
+/* Home marker styles */
+.home-container {
+  background-color: white;
+  border-radius: 80px;
+  padding: 12px 14px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-lock {
+  background-color: black !important;
+  color: white !important;
+}
+
+.home-lock:hover {
+  background-color: black !important;
+}
+
+/* Popup styles */
+.home-popup {
+  max-width: 100% !important;
+  z-index: 9999;
+}
+
+.home-popup > .mapboxgl-popup-content {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.home-popup > .mapboxgl-popup-tip {
+  display: none !important;
+}
+
+/* Comparable property popup styles */
+.comparable-item {
+  display: flex;
+  border-radius: 6px;
+  background-color: white;
+  padding: 0.3rem;
+  align-items: center;
+  width: max-content;
+}
+
+.property-image {
+  border-radius: 6px;
+  width: 100px;
+  height: 100px;
+}
+
+.details {
+  margin-left: 1rem;
+  padding-right: 1rem;
+  font-family: Arial, sans-serif;
+}
+
+.price {
+  font-weight: bold;
+}
+
+.features,
+.property-name,
+.occupancy {
+  margin-bottom: 0.5rem;
+}
+
+.property-name {
+  text-overflow: ellipsis;
+}
+
+.dialoge-content {
+  padding: 0 !important ;
+}
+.hide-map {
+  display: none;
+}
+
+.hide-toggle {
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  .hide-map {
+      display: block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hide-toggle {
+      display: none;
+  }
+}

@@ -7,9 +7,15 @@ const nextConfig = {
             hostname: 'images.unsplash.com',
             pathname: '/**', // Allow all paths under this domain
           },
+          {
+            protocol: 'https',
+            hostname: 'a0.muscache.com',
+            pathname: '/im/pictures/**', // Allow all paths under this domain
+          }
  
         ],
       },
+ 
 };
 
 export default nextConfig;

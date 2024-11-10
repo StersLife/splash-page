@@ -142,7 +142,8 @@ export default function Component() {
     <div className="min-h-screen bg-gray-100 p-8">
       <Card className="max-w-4xl mx-auto bg-white shadow-md rounded-lg overflow-hidden">
         <CardHeader className="bg-gray-800 text-white p-6">
-          <CardTitle className="text-3xl font-bold">Supabase Donation Tracker</CardTitle>
+          <CardTitle className="text-3xl font-bold">Amal Lil-Mansiyīn (أمل للمنسيين)
+          </CardTitle>
         </CardHeader>
         <CardContent className="p-6">
           <Tabs defaultValue="summary" className="space-y-4">
@@ -240,11 +241,9 @@ export default function Component() {
                       {donors.map((donor) => (
                         <TableRow key={donor.id}>
                           <TableCell>
-                            {isAdmin ? (
-                              donor.name
-                            ) : (
-                              <span className="filter blur-sm">{donor.name}</span>
-                            )}
+                             
+                              {donor.name}
+                             
                           </TableCell>
                         </TableRow>
                       ))}

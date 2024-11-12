@@ -23,9 +23,6 @@ interface FormData {
 }
 
 export function CaptivePortalComponent({ makeUrl }: { makeUrl: string }) {
-  console.log({
-    makeUrl
-  })
   const [formData, setFormData] = useState<FormData>({
     fullName: "",
     email: "",
@@ -37,6 +34,8 @@ export function CaptivePortalComponent({ makeUrl }: { makeUrl: string }) {
     clientIp: "",
     clientMac: "",
   });
+  
+  const [dateValidated, setDateValidated] = useState(true);
 
   useEffect(() => {
     const searchParams = new URLSearchParams(window.location.search);
@@ -57,13 +56,19 @@ export function CaptivePortalComponent({ makeUrl }: { makeUrl: string }) {
 
   const handleDateChange = (date: Date | undefined) => {
     setFormData(prev => ({ ...prev, checkoutDate: date }));
+    setDateValidated(true);
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if(!formData.fullName || !formData.email || !formData.phone || !formData.checkoutDate) {
-       
+    if (!formData.checkoutDate && formData.fullName && formData.email && formData.phone) {
+      setDateValidated(false);
+      return;
+    }
+    
+    const form = e.target as HTMLFormElement;
+    if (!form.checkValidity() || !formData.checkoutDate) {
       return;
     }
     
@@ -92,7 +97,7 @@ export function CaptivePortalComponent({ makeUrl }: { makeUrl: string }) {
   };
 
   return (
-    <div className="min-h-screen bg-[#f6f5f3] flex flex-col items-center justify-center p-4">
+    <div className="min-h-screen bg-[#f6f5f3] flex flex-col items-center max-sm:pt-[0rem] max-sm:justify-start justify-center p-4">
       <div className="w-full max-w-md bg-white rounded-lg shadow-sm p-8 space-y-6">
         <div className="text-center">
           <div className="relative mx-auto h-16 w-52">
@@ -158,8 +163,11 @@ export function CaptivePortalComponent({ makeUrl }: { makeUrl: string }) {
             <Popover>
               <PopoverTrigger asChild>
                 <Button
+                  type="button"
                   variant="outline"
-                  className={`w-full justify-start text-left font-normal ${!formData.checkoutDate && "text-muted-foreground"}`}
+                  className={`w-full justify-start text-left font-normal ${
+                    !dateValidated ? 'border-red-500 hover:border-red-500' : ''
+                  } ${!formData.checkoutDate && "text-muted-foreground"}`}
                 >
                   <CalendarIcon className="mr-2 h-4 w-4" />
                   {formData.checkoutDate ? format(formData.checkoutDate, "PPP") : "Select date"}
@@ -180,6 +188,9 @@ export function CaptivePortalComponent({ makeUrl }: { makeUrl: string }) {
                 />
               </PopoverContent>
             </Popover>
+            {!dateValidated && (
+              <p className="text-sm text-red-500 mt-1">Please select a date</p>
+            )}
           </div>
           <Button 
             className="w-full bg-[#1b6ac9] hover:bg-[#1659a9] text-white font-semibold py-2 px-4 rounded-md transition duration-150 ease-in-out"
